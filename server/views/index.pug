@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1= title 
+  p Welcome #{userName}
+  p.ciao ciaooooo 
+  p#idacaso eeeeee 
+  p.ciao ooooooo
+  
+  h2 Esempio di link
+  a(href=`${link}`) #{number}
+
+  h2 Lista con elementi di array
+  ul
+    each item in array 
+      li #{item}
+
+  h2 Lista con elementi di array filtrati
+  ul
+    each item in array 
+      if item == "elemento 3"
+        li #{item}
+      else 
+        li Non sono il 3
